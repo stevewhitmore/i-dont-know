@@ -6,14 +6,23 @@
     <title>Document</title>
 </head>
 <body>
-    Hi there! <span>What kind of animal do you want?</span>
+    Hi there! <span>What color do you want your backround?</span>
     <select>
-        <option value="dog">Dog</option>
-        <option value="cat">Cat</option>
-        <option value="fish">Fish</option>
-        <option value="gerbil">Gerbil</option>
-        <option value="fox">Fox</option>
+        <option value="red">Red</option>
+        <option value="orange">Orange</option>
+        <option value="yellow">Yellow</option>
+        <option value="green">Green</option>
+        <option value="blue">Blue</option>
     </select>
-    <button type="button">Save</button>
+    <button type="button" onclick="changeBackroundColor()" >Change Backround Color</button>
+
+    <script>
+        function changeBackroundColor() {
+            const bodyEL = document.querySelector('body');
+            const dropdownEL = document.querySelector('select');
+
+            bodyEL.style.backgroundColor = dropdownEL.value;
+        }
+    </script>
 </body>
 </html>
