@@ -5,13 +5,13 @@ function changeBackroundColor() {
 
   bodyEl.style.backgroundColor = dropdownEl.value;
 
-  if (dropdownEl.value !== 'white') {
-    introTextEls.forEach(el => {
+  
+  introTextEls.forEach(el => {
+    if (dropdownEl.value !== 'white') {
       el.classList.add('colored');
-    });
-  } else {
-    introTextEls.forEach(el => {
+    } else {
       el.classList.remove('colored');
-    });
+    }
+  });
   }
 }
