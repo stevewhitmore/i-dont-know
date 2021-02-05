@@ -4,11 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        div span {
-            text-decoration: underline;
-        }
-    </style>
+    <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
     <div>Hi there! <span>What color do you want your backround?</span></div>
@@ -21,13 +17,6 @@
     </select>
     <button type="button" onclick="changeBackroundColor()" >Change Backround Color</button>
 
-    <script>
-        function changeBackroundColor() {
-            const bodyEL = document.querySelector('body');
-            const dropdownEL = document.querySelector('select');
-
-            bodyEL.style.backgroundColor = dropdownEL.value;
-        }
-    </script>
+    <script src="./script.js"></script>
 </body>
 </html>
