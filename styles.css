@@ -1,3 +1,7 @@
-div span {
+.colored {
+  color: white;
+}
+
+.intro-text span {
   text-decoration: underline;
 }

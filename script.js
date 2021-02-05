@@ -1,6 +1,17 @@
 function changeBackroundColor() {
-  const bodyEL = document.querySelector('body');
-  const dropdownEL = document.querySelector('select');
+  const bodyEl = document.querySelector('body');
+  const dropdownEl = document.querySelector('select');
+  const introTextEls = document.querySelectorAll(".intro-text");
 
-  bodyEL.style.backgroundColor = dropdownEL.value;
+  bodyEl.style.backgroundColor = dropdownEl.value;
+
+  if (dropdownEl.value !== 'white') {
+    introTextEls.forEach(el => {
+      el.classList.add('colored');
+    });
+  } else {
+    introTextEls.forEach(el => {
+      el.classList.remove('colored');
+    });
+  }
 }
